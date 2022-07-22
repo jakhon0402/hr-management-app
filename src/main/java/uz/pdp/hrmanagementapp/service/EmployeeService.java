@@ -1,6 +1,7 @@
 package uz.pdp.hrmanagementapp.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.security.core.Authentication;
@@ -30,9 +31,11 @@ public class EmployeeService {
     @Autowired
     RoleRepo roleRepo;
 
+    @Lazy
     @Autowired
     JavaMailSender javaMailSender;
 
+    @Lazy
     @Autowired
     PasswordEncoder passwordEncoder;
 
